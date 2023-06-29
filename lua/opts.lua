@@ -1,15 +1,14 @@
--- [[ opts.lua ]]
 local opt = vim.opt
 local cmd = vim.api.nvim_command
 
--- [[Context]]
+-- [[ Context ]]
 opt.colorcolumn = '120'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
 opt.signcolumn = 'yes'
 
--- [[Filetypes]]
+-- [[ Filetypes ]]
 opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 
