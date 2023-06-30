@@ -1,5 +1,4 @@
 local opt = vim.opt
-local cmd = vim.api.nvim_command
 
 -- [[ Context ]]
 opt.colorcolumn = '120'
@@ -16,7 +15,6 @@ opt.fileencoding = 'utf8'
 opt.guifont = "FiraCode Nerd Font:12"
 opt.syntax = "ON"
 opt.termguicolors = true
-cmd('colorscheme dracula')
 
 -- [[ Search ]]
 opt.ignorecase = true
