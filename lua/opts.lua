@@ -12,8 +12,8 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 
 -- [[ Theme ]]
-opt.guifont = "FiraCode Nerd Font:12"
-opt.syntax = "ON"
+opt.guifont = 'Hack Nerd Font:12'
+opt.syntax = 'ON'
 opt.termguicolors = true
 
 -- [[ Search ]]
