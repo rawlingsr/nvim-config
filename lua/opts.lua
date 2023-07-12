@@ -12,7 +12,7 @@ opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 
 -- [[ Theme ]]
-opt.guifont = 'Hack Nerd Font:12'
+opt.guifont = 'Source Code Pro Nerd Font:12'
 opt.syntax = 'ON'
 opt.termguicolors = true
 
