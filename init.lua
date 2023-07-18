@@ -15,9 +15,11 @@ require('plug')
 require('keys')
 
 -- PLUGINS
-require('nvim-tree').setup{
-    cmd('colorscheme dracula')
-}
+require('nvim-tree').setup({
+    git = { ignore = false },
+    cmd('colorscheme dracula'),
+
+})
 require('lualine').setup{
     options = {
         theme = 'dracula-nvim'
