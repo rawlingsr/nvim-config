@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'nvim-tree/nvim-tree.lua'
+    use {'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons'}
 
     -- [[ Theme ]]
     use 'mhinz/vim-startify' 
@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
     use 'windwp/nvim-autopairs'
+    -- use {'akinsho/bufferline.nvim', tag = "v4.3.0", requires = 'nvim-tree/nvim-web-devicons'}
 
     if packer_bootstrap then
         require('packer').sync()

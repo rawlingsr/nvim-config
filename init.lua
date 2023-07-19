@@ -20,10 +20,13 @@ require('nvim-tree').setup({
     cmd('colorscheme dracula'),
 
 })
+
 require('lualine').setup{
     options = {
         theme = 'dracula-nvim'
     }
 }
+
+-- require("bufferline").setup{}
 require('nvim-autopairs').setup{}
 
