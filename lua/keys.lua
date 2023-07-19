@@ -6,7 +6,3 @@ map('n', '<Leader>n', '', {callback = function()
 end
 })
 
-map('n', '<Leader>m', '', {callback = function()
-  api.tree.focus({})
-end
-})
