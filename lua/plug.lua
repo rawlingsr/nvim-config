@@ -74,6 +74,12 @@ return require('packer').startup(function(use)
         config = function() require('nvim-autopairs').setup{} end
     }
 
+    -- plugins to try out
+    -- fd
+    -- nvim-treesitter
+
+
+    -- Disabled plugins
     use {
         'akinsho/bufferline.nvim', 
         disable = true,
