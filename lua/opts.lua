@@ -28,6 +28,8 @@ opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 8
 opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append "eol:↴"
 
 -- [[ Splits ]]
 opt.splitright = true

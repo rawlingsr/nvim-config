@@ -1,4 +1,3 @@
-local cmd = vim.api.nvim_command
 local shell_options = {}
 if vim.fn.executable "pwsh" == 1 then
     shell_options = {
@@ -29,33 +28,19 @@ require('opts')
 require('plug')
 require('keys')
 
--- PLUGINS
-require('nvim-tree').setup({
-    git = { ignore = false },
-    cmd('colorscheme dracula'),
+local ensure_packer = function()
+    local fn = vim.fn
+    local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({'git', 'clone', '--depth', '1', 'git@github.com:wbthomason/packer.nvim.git', install_path})
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
+end
 
-})
+local packer_bootstrap = ensure_packer()
 
-require('lualine').setup{
-    options = {
-        theme = 'dracula-nvim'
-    }
-}
-
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
-
-require("indent_blankline").setup {
-    show_end_of_line = true,
-    space_char_blankline = " ",
-}
--- require("bufferline").setup{}
-require('nvim-autopairs').setup{}
-require('gitsigns').setup()
-require("toggleterm").setup({
-    open_mapping = '<C-\\>',
-    start_in_insert = true,
-    direction = 'float',
-})
-require('Comment').setup()
-
+if packer_bootstrap then
+    require('packer').sync()
+end
