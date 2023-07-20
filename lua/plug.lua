@@ -21,15 +21,18 @@ return require('packer').startup(function(use)
     use 'Mofiqul/dracula.nvim' 
 
       -- [[ Dev ]]
+    use 'numToStr/Comment.nvim'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {"akinsho/toggleterm.nvim", tag = 'v2.7.1'}
     use 'majutsushi/tagbar'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
     use 'windwp/nvim-autopairs'
+    use 'lewis6991/gitsigns.nvim'
     -- use {'akinsho/bufferline.nvim', tag = "v4.3.0", requires = 'nvim-tree/nvim-web-devicons'}
 
     if packer_bootstrap then
