@@ -1,14 +1,13 @@
-local cmd = vim.api.nvim_command
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = 'nvim-tree/nvim-web-devicons',
+        requires = { 'nvim-tree/nvim-web-devicons', 'Mofiqul/dracula.nvim' },
         config = function()
             require('nvim-tree').setup{
                 git = { ignore = false },
-                -- cmd('colorscheme dracula'),
+                vim.api.nvim_command('colorscheme dracula'),
             }
         end
     }
@@ -18,18 +17,14 @@ return require('packer').startup(function(use)
         requires = 'Mofiqul/dracula.nvim',
         config = function()
             require('lualine').setup{
-                options = {
-                    theme = 'dracula-nvim'
-                }
+                options = { theme = 'dracula-nvim' }
             }
         end
     }
 
     use {
         'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        config = function() require('Comment').setup() end
     }
 
     use {
@@ -60,14 +55,32 @@ return require('packer').startup(function(use)
             }
         end
     }
-    -- use {'tpope/vim-fugitive'}
-    -- use {'junegunn/gv.vim'}
-    -- use {'windwp/nvim-autopairs'}
-    -- require('nvim-autopairs').setup{}
-    -- use {'lewis6991/gitsigns.nvim'}
-    -- require('gitsigns').setup()
-    -- use {'akinsho/bufferline.nvim', tag = "v4.3.0", requires = 'nvim-tree/nvim-web-devicons'}
-    -- require("bufferline").setup{}
+
+    -- Git
+    use {
+        'tpope/vim-fugitive',
+        tag = 'v3.7'
+    }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function() require('gitsigns').setup() end
+    }
+
+    use {'junegunn/gv.vim'}
+
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup{} end
+    }
+
+    use {
+        'akinsho/bufferline.nvim', 
+        disable = true,
+        tag = "v4.3.0", 
+        requires = 'nvim-tree/nvim-web-devicons',
+        config = function() require("bufferline").setup{} end
+    }
 
     use {'mhinz/vim-startify', disable = true}
     use {'majutsushi/tagbar', disable = true}
