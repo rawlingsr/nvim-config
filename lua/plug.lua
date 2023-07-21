@@ -90,7 +90,8 @@ return require('packer').startup(function(use)
         config = function() require('nvim-autopairs').setup{} end
     }
 
-    -- Disabled plugins
+    use {'mhinz/vim-startify'}
+
     use {
         'akinsho/bufferline.nvim', 
         disable = true,
@@ -99,7 +100,5 @@ return require('packer').startup(function(use)
         config = function() require("bufferline").setup{} end
     }
 
-    use {'mhinz/vim-startify', disable = true}
     use {'majutsushi/tagbar', disable = true}
-
 end)
