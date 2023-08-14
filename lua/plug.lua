@@ -43,6 +43,22 @@ return require('packer').startup(function(use)
         end,
     }
 
+    use {'neoclide/coc.nvim', branch = 'release'}
+
+    -- use { 'dense-analysis/ale' }
+    --
+    -- -- If I go with deoplete
+    -- use {
+    --     'Shougo/deoplete.nvim',
+    --     config = function()
+    --     end
+    -- }
+
+    -- If I go with ddc
+    -- use { 'vim-denops/denops.vim' }
+
+    -- use { 'vim-denops/denops-helloworld.vim' }
+
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
