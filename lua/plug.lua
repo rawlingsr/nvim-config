@@ -2,6 +2,31 @@ return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
     use {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require('lspconfig')
+            lspconfig.pyright.setup {}
+            nvim_lsp.denols.setup {
+                on_attach = on_attach,
+                root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+            }
+
+            nvim_lsp.tsserver.setup {
+                on_attach = on_attach,
+                root_dir = nvim_lsp.util.root_pattern("package.json"),
+                single_file_support = false
+            }
+
+            lspconfig.rust_analyzer.setup {
+                settings = {
+                    ['rust-analyzer'] = {},
+                },
+            }
+        end
+
+    }
+
+    use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons', 'Mofiqul/dracula.nvim' },
         config = function()
@@ -42,22 +67,6 @@ return require('packer').startup(function(use)
             }
         end,
     }
-
-    use {'neoclide/coc.nvim', branch = 'release'}
-
-    -- use { 'dense-analysis/ale' }
-    --
-    -- -- If I go with deoplete
-    -- use {
-    --     'Shougo/deoplete.nvim',
-    --     config = function()
-    --     end
-    -- }
-
-    -- If I go with ddc
-    -- use { 'vim-denops/denops.vim' }
-
-    -- use { 'vim-denops/denops-helloworld.vim' }
 
     use {
         'nvim-telescope/telescope.nvim',
