@@ -28,6 +28,10 @@ return require('packer').startup(function(use)
     }
 
     use {
+        "williamboman/nvim-lsp-installer"
+    }
+
+    use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons', 'Mofiqul/dracula.nvim' },
         config = function()
