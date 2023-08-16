@@ -28,7 +28,8 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "williamboman/nvim-lsp-installer"
+        "williamboman/mason.nvim",
+        config = function() require("mason").setup{} end
     }
 
     use {
