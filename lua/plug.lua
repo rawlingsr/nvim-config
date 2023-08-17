@@ -1,6 +1,3 @@
-local lua_ls_setup = {
-}
-
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
