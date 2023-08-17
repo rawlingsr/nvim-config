@@ -1,35 +1,32 @@
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
+
     use {
-        "neovim/nvim-lspconfig",
+        "williamboman/mason-lspconfig.nvim",
+        requires = { {"williamboman/mason.nvim"}, {"neovim/nvim-lspconfig"} },
         config = function()
             local lspconfig = require('lspconfig')
-            lspconfig.pyright.setup {}
+            require("mason").setup()
+            require("mason-lspconfig").setup()
+            require("mason-lspconfig").setup_handlers {
+                function (server_name)
+                    require("lspconfig")[server_name].setup {}
+                end,
+                ["denols"] = function()
+                    lspconfig.denols.setup {
+                        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+                    }
+                end,
 
-            lspconfig.denols.setup {
-                on_attach = on_attach,
-                root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-            }
-
-            lspconfig.tsserver.setup {
-                on_attach = on_attach,
-                root_dir = lspconfig.util.root_pattern("package.json"),
-                single_file_support = false
-            }
-
-            lspconfig.rust_analyzer.setup {
-                settings = {
-                    ['rust-analyzer'] = {},
-                },
+                ["tsserver"] = function()
+                    lspconfig.tsserver.setup {
+                        root_dir = lspconfig.util.root_pattern("package.json"),
+                        single_file_support = false
+                    }
+                end
             }
         end
-
-    }
-
-    use {
-        "williamboman/mason.nvim",
-        config = function() require("mason").setup{} end
     }
 
     use {
