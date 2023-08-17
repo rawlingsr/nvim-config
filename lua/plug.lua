@@ -1,3 +1,6 @@
+local lua_ls_setup = {
+}
+
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
@@ -13,6 +16,7 @@ return require('packer').startup(function(use)
                 function (server_name)
                     require("lspconfig")[server_name].setup {}
                 end,
+
                 ["denols"] = function()
                     lspconfig.denols.setup {
                         root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
@@ -23,6 +27,18 @@ return require('packer').startup(function(use)
                     lspconfig.tsserver.setup {
                         root_dir = lspconfig.util.root_pattern("package.json"),
                         single_file_support = false
+                    }
+                end,
+
+                ["lua_ls"] = function()
+                    lspconfig.lua_ls.setup{
+                        settings = {
+                            Lua = {
+                                diagnostics = {
+                                    globals = { 'vim' }
+                                }
+                            }
+                        }
                     }
                 end
             }
@@ -162,9 +178,9 @@ return require('packer').startup(function(use)
     use {'mhinz/vim-startify'}
 
     use {
-        'akinsho/bufferline.nvim', 
+        'akinsho/bufferline.nvim',
         disable = true,
-        tag = "v4.3.0", 
+        tag = "v4.3.0",
         requires = 'nvim-tree/nvim-web-devicons',
         config = function() require("bufferline").setup{} end
     }
