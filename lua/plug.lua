@@ -54,13 +54,13 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = 'Mofiqul/dracula.nvim',
-        config = function()
-            require('lualine').setup {
-                options = { theme = 'dracula-nvim' }
-            }
-        end
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        }
     }
 
     use {
@@ -121,7 +121,6 @@ return require('packer').startup(function(use)
 
     use {
         'lewis6991/gitsigns.nvim',
-        commit = 'bae45ef449d8811061cc940459e70e883a3aa83a',
         config = function()
             require('gitsigns').setup {
                 on_attach = function(bufnr)
