@@ -121,6 +121,7 @@ return require('packer').startup(function(use)
 
     use {
         'lewis6991/gitsigns.nvim',
+        commit = 'bae45ef449d8811061cc940459e70e883a3aa83a',
         config = function() require('gitsigns').setup{
             on_attach = function(bufnr)
                 local gs = package.loaded.gitsigns
