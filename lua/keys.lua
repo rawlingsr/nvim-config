@@ -20,10 +20,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local opts = { buffer = ev.buf }
 
     local desc = function(description)
+        local opts = {}
         opts.desc = description
+        opts.buffer = ev.buf
         return opts
     end
 
