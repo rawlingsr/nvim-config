@@ -183,13 +183,4 @@ return require('packer').startup(function(use)
 
     use { 'mhinz/vim-startify' }
 
-    use {
-        'akinsho/bufferline.nvim',
-        disable = true,
-        tag = "v4.3.0",
-        requires = 'nvim-tree/nvim-web-devicons',
-        config = function() require("bufferline").setup {} end
-    }
-
-    use { 'majutsushi/tagbar', disable = true }
 end)
