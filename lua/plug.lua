@@ -43,13 +43,13 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons', 'Mofiqul/dracula.nvim' },
+        'nvim-lualine/lualine.nvim',
+        requires = 'Mofiqul/dracula.nvim',
         config = function()
-            require('nvim-tree').setup {
-                git = { ignore = false },
-                vim.api.nvim_command('colorscheme dracula'),
+            require('lualine').setup {
+                options = { theme = 'dracula-nvim' }
             }
+            vim.api.nvim_command('colorscheme dracula')
         end
     }
 
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
         branch = "v3.x",
         requires = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
         }
     }

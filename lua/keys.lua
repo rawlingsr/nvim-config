@@ -1,8 +1,5 @@
 local map = vim.api.nvim_set_keymap
 
-local api = require "nvim-tree.api"
-map('n', '<Leader>n', '', {callback = function()  api.tree.toggle({}) end })
-
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
