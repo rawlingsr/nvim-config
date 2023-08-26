@@ -25,8 +25,11 @@ vim.g.mapleader = ','
 -- Commenting out for now, need to find a better binding before making better use of local leader.
 -- vim.g.localleader = '\\'
 
+-- set a very basic theme in case a good theme is not available.
+vim.g.t_co = 256
+vim.g.background = 'dark'
+
 -- Imports
-require('vars')
 require('opts')
 require('plug')
 require('keys')
