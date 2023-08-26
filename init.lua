@@ -14,6 +14,7 @@ for option, value in pairs(shell_options) do
     vim.opt[option] = value
 end
 
+-- Trim trailing whitespace when saving files.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[%s/\s\+$//e]],
