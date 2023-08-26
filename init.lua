@@ -22,7 +22,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 -- Leader
 vim.g.mapleader = ','
-vim.g.localleader = '\\'
+-- Commenting out for now, need to find a better binding before making better use of local leader.
+-- vim.g.localleader = '\\'
 
 -- Imports
 require('vars')
