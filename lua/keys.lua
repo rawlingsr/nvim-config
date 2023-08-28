@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 -- I couldn't find a lua way to open neotree
-map('n', '<leader>/', ":Neotree<CR>", {desc = "open neotree"})
+map('n', '<leader>/', ":Neotree toggle<CR>", {desc = "open neotree"})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
