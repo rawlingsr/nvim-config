@@ -27,7 +27,3 @@ opt.list = true
 opt.listchars:append "space:⋅"
 opt.listchars:append "eol:↴"
 
--- [[ Splits ]]
-opt.splitright = true
-opt.splitbelow = true
-
