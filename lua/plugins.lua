@@ -13,7 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
     -- THEME
     "nvim-tree/nvim-web-devicons",
     {
@@ -30,10 +30,10 @@ plugins = {
     },
     {
         'lukas-reineke/indent-blankline.nvim',
-            opts = {
-                show_end_of_line = true,
-                space_char_blankline = " ",
-            },
+        opts = {
+            show_end_of_line = true,
+            space_char_blankline = " ",
+        },
     },
     {
         "nvim-neo-tree/neo-tree.nvim",

@@ -21,5 +21,6 @@ opt.list = true
 opt.listchars:append "eol:↴"
 opt.listchars:append "nbsp:+"
 opt.listchars:append "space:⋅"
+opt.shiftround = true
 opt.shiftwidth = 0 -- Use tabstop as number of spaces to shift by
 opt.tabstop = 4
