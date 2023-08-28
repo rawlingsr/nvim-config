@@ -26,7 +26,7 @@ vim.g.mapleader = ','
 -- vim.g.localleader = '\\'
 
 -- Imports
-require('opts')
-require('plug')
+require('options')
+require('plugins')
 require('keys')
 
