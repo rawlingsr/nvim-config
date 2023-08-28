@@ -116,7 +116,27 @@ local plugins = {
         config = function()
             local lspconfig = require('lspconfig')
             require("mason").setup()
-            require("mason-lspconfig").setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "denols",
+                    "tsserver",
+                    "lua_ls",
+                    "rust_analyzer",
+                    "html",
+                    "cssls",
+                    "jsonls",
+                    "rubocop",
+                    "pyright",
+                    "dockerls",
+                    "eslint",
+                    "angularls",
+                    "bashls",
+                    "docker_compose_language_service",
+                    "gradle_ls",
+                    "groovyls",
+                    "ruby_ls",
+                },
+            })
             require("mason-lspconfig").setup_handlers {
                 function(server_name)
                     require("lspconfig")[server_name].setup {}
