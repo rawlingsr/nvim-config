@@ -7,7 +7,7 @@ opt.relativenumber = true
 opt.scrolloff = 4
 
 -- [[ Theme ]]
-opt.guifont = 'Source Code Pro Nerd Font:12'
+opt.guifont = 'Source Code Pro Nerd Font:12, Fira Code:12, Source Code Pro:12, Consolas:12'
 opt.syntax = 'ON'
 opt.termguicolors = true
 
