@@ -11,6 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {'tpope/vim-fugitive'}
+plugins = {
+    'tpope/vim-fugitive',
+    'junegunn/gv.vim',
+    'mhinz/vim-startify',
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {}
+    }
+}
 
 require("lazy").setup(plugins)
