@@ -7,10 +7,6 @@ opt.relativenumber = true
 opt.scrolloff = 4
 opt.signcolumn = 'yes'
 
--- [[ Filetypes ]]
-opt.encoding = 'utf8'
-opt.fileencoding = 'utf8'
-
 -- [[ Theme ]]
 opt.guifont = 'Source Code Pro Nerd Font:12'
 opt.syntax = 'ON'
