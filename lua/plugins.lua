@@ -17,16 +17,16 @@ plugins = {
     -- THEME
     "nvim-tree/nvim-web-devicons",
     {
-        'Mofiqul/dracula.nvim',
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.api.nvim_command('colorscheme dracula')
+            vim.api.nvim_command('colorscheme tokyonight-storm')
         end,
     },
     {
         'nvim-lualine/lualine.nvim',
-        opts = { theme = 'dracula-nvim' },
+        opts = { theme = 'tokyonight' },
     },
     {
         'lukas-reineke/indent-blankline.nvim',
