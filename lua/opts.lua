@@ -19,11 +19,10 @@ opt.incsearch = true
 opt.hlsearch = true
 
 -- [[ Whitespace ]]
-opt.expandtab = true
-opt.shiftwidth = 4
-opt.softtabstop = 4
-opt.tabstop = 4
+opt.expandtab = true -- use spaces for indentation
 opt.list = true
 opt.listchars:append "space:⋅"
 opt.listchars:append "eol:↴"
 
+opt.shiftwidth = 0 -- Use tabstop as number of spaces to shift by
+opt.tabstop = 4
