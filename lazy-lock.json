@@ -1,6 +1,5 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
-  "dracula.nvim": { "branch": "main", "commit": "9fe831e685a76e1a1898a694623b33247c4d036c" },
   "gitsigns.nvim": { "branch": "main", "commit": "d8590288417fef2430f85bc8b312fae8b1cf2c40" },
   "gv.vim": { "branch": "master", "commit": "320cc8c477c5acc4fa0e52a460d87b2af54fa051" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
