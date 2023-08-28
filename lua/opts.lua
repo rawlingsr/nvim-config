@@ -5,7 +5,6 @@ opt.colorcolumn = '120'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
-opt.signcolumn = 'yes'
 
 -- [[ Theme ]]
 opt.guifont = 'Source Code Pro Nerd Font:12'
