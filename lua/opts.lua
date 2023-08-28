@@ -19,8 +19,9 @@ opt.smartcase = true
 -- [[ Whitespace ]]
 opt.expandtab = true -- use spaces for indentation
 opt.list = true
-opt.listchars:append "space:⋅"
 opt.listchars:append "eol:↴"
-
+opt.listchars:append "nbsp:+"
+opt.listchars:append "space:⋅"
+opt.listchars:append "trail:X"
 opt.shiftwidth = 0 -- Use tabstop as number of spaces to shift by
 opt.tabstop = 4
