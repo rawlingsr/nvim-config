@@ -15,8 +15,6 @@ opt.termguicolors = true
 -- [[ Search ]]
 opt.ignorecase = true
 opt.smartcase = true
-opt.incsearch = true
-opt.hlsearch = true
 
 -- [[ Whitespace ]]
 opt.expandtab = true -- use spaces for indentation
