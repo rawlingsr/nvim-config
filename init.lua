@@ -27,6 +27,6 @@ vim.g.mapleader = ','
 
 -- Imports
 require('options')
-require('plugins')
+-- require('plugins')
 require('keys')
 
