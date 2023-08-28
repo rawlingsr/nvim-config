@@ -16,8 +16,8 @@ end
 
 -- Trim trailing whitespace when saving files.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" },
-  command = [[%s/\s\+$//e]],
+    pattern = { "*" },
+    command = [[%s/\s\+$//e]],
 })
 
 -- Leader
@@ -25,8 +25,9 @@ vim.g.mapleader = ','
 -- Commenting out for now, need to find a better binding before making better use of local leader.
 -- vim.g.localleader = '\\'
 
+
 -- Imports
+require('plugins')
 require('options')
--- require('plugins')
 require('keys')
 
