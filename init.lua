@@ -25,9 +25,26 @@ vim.g.mapleader = ','
 -- Commenting out for now, need to find a better binding before making better use of local leader.
 -- vim.g.localleader = '\\'
 
+-- Plugins
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+local plugins = require('plugins')
+require("lazy").setup(plugins)
 
 -- Imports
-require('plugins')
 require('options')
 require('keys')
 
