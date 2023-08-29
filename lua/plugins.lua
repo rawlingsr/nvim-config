@@ -136,7 +136,6 @@ local plugins = {
                     "bashls",
                     "docker_compose_language_service",
                     "gradle_ls",
-                    "groovyls",
                     "ruby_ls",
                 },
             })
