@@ -33,10 +33,7 @@ local M = {
     -- GIT
     'tpope/vim-fugitive',
     'junegunn/gv.vim',
-    {
-        'lewis6991/gitsigns.nvim',
-        opts = {} -- I'd been putting the keymap in here, but I don't want to do that anymore.
-    },
+    'lewis6991/gitsigns.nvim',
 
     -- LIBS
     "nvim-lua/plenary.nvim",
