@@ -25,3 +25,6 @@ opt.listchars:append "space:⋅"
 opt.shiftround = true
 opt.shiftwidth = 0 -- Use tabstop as number of spaces to shift by
 opt.tabstop = 4
+
+-- System
+opt.shellslash = true
