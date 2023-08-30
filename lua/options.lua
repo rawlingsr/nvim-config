@@ -1,22 +1,22 @@
 local opt = vim.opt
 
--- [[ Context ]]
+-- Context
 opt.colorcolumn = '120' -- Highlight nth column
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4 -- How close curser can get to the edge
 opt.signcolumn = 'yes'
 
--- [[ Theme ]]
+-- Theme
 opt.guifont = 'Source Code Pro Nerd Font:12, Fira Code:12, Source Code Pro:12, Consolas:12'
 opt.syntax = 'ON' -- Syntax highlighting based on file type.
 opt.termguicolors = true
 
--- [[ Search ]]
+-- Search
 opt.ignorecase = true
 opt.smartcase = true
 
--- [[ Whitespace ]]
+-- Whitespace
 opt.expandtab = true -- use spaces for indentation
 opt.list = true
 opt.listchars:append "eol:↴"
