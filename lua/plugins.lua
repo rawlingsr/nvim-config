@@ -35,7 +35,7 @@ local M = {
                     ['b'] = function() vim.api.nvim_exec('Neotree focus buffers left', true) end,
                     ['g'] = function() vim.api.nvim_exec('Neotree focus git_status left', true) end,
                 },
-  },
+            },
         }
     },
 
@@ -50,8 +50,8 @@ local M = {
     {
         'nvim-telescope/telescope-fzf-native.nvim',
         build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release ' ..
-        '&& cmake --build build --config Release ' ..
-        '&& cmake --install build --prefix build'
+            '&& cmake --build build --config Release ' ..
+            '&& cmake --install build --prefix build'
     },
     -- CONVENIENCE
     'mhinz/vim-startify',
@@ -80,7 +80,7 @@ local M = {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
-        config = function ()
+        config = function()
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
@@ -99,7 +99,7 @@ local M = {
                 },
                 sync_install = false,
                 highlight = { enable = true },
-	    })
+            })
         end
     },
 
