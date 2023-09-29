@@ -15,6 +15,7 @@ local M = {
     },
     {
         'lukas-reineke/indent-blankline.nvim',
+        main = "ibl",
         opts = {
             show_end_of_line = true,
             space_char_blankline = " ",
