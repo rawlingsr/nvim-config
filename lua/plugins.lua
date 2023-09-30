@@ -43,15 +43,34 @@ local M = {
     -- GIT
     {
         'tpope/vim-fugitive',
+        enabled = false,
     },
 
     {
         'junegunn/gv.vim',
+        enabled = false,
     },
 
     {
         'lewis6991/gitsigns.nvim',
-        lazy = false,
+        event = "BufReadPre",
+        opts = {},
+    },
+
+    {
+        "sindrets/diffview.nvim",
+        cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+    },
+
+    {
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "sindrets/diffview.nvim",
+            "ibhagwan/fzf-lua",
+        },
+        config = true,
     },
 
     -- LIBS
