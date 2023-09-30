@@ -22,10 +22,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- See `:help vim.lsp.*` for documentation on any of the below functions
 
     local desc = function(description)
-        local opts = {}
-        opts.desc = description
-        opts.buffer = ev.buf
-        return opts
+      local opts = {}
+      opts.desc = description
+      opts.buffer = ev.buf
+      return opts
     end
 
     map('n', 'gD', vim.lsp.buf.declaration, desc("Go to Declaration"))

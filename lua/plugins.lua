@@ -41,8 +41,14 @@ local M = {
     },
 
     -- GIT
-    'tpope/vim-fugitive',
-    'junegunn/gv.vim',
+    {
+        'tpope/vim-fugitive',
+    },
+
+    {
+        'junegunn/gv.vim',
+    },
+
     {
         'lewis6991/gitsigns.nvim',
         lazy = false,
