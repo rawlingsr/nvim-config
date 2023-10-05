@@ -13,14 +13,13 @@ local M = {
         'nvim-lualine/lualine.nvim',
         opts = { theme = 'tokyonight' },
     },
+
     {
         'lukas-reineke/indent-blankline.nvim',
         main = "ibl",
-        opts = {
-            show_end_of_line = true,
-            space_char_blankline = " ",
-        },
+        opts = {},
     },
+
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -37,7 +36,7 @@ local M = {
                     ['g'] = function() vim.api.nvim_exec('Neotree focus git_status left', true) end,
                 },
             },
-        }
+       }
     },
 
     -- GIT

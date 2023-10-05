@@ -19,7 +19,7 @@ opt.smartcase = true
 -- Whitespace
 opt.expandtab = true -- use spaces for indentation
 opt.list = true
-opt.listchars:append "eol:↴"
+-- opt.listchars:append "eol:↴"
 opt.listchars:append "nbsp:+"
 opt.listchars:append "space:⋅"
 opt.shiftround = true
