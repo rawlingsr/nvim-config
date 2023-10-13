@@ -63,8 +63,7 @@ local M = {
 
     {
         "https://github.com/setibeings/neogit",
-        branch = "platform-independent-paths",
-        commit = "50efeb5715a9cc6f39f306cc9ffbc9d43d7257e7",
+        branch = "format-drive-letter",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
