@@ -62,8 +62,7 @@ local M = {
     },
 
     {
-        "https://github.com/setibeings/neogit",
-        branch = "format-drive-letter",
+        "NeogitOrg/neogit",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
