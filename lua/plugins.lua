@@ -62,7 +62,8 @@ local M = {
     },
 
     {
-        "NeogitOrg/neogit",
+        "https://github.com/setibeings/neogit",
+        branch = "state-joinpath",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
