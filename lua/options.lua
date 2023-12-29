@@ -8,7 +8,15 @@ opt.scrolloff = 4 -- How close curser can get to the edge
 opt.signcolumn = 'yes'
 
 -- Theme
-opt.guifont = 'Source Code Pro Nerd Font:12, Fira Code:12, Source Code Pro:12, Consolas:12'
+-- opt.guifont = 'SauceCodePro_Nerd_Font,Fira_Code,Source_Code_Pro,Consolas,Mono:h12'
+opt.guifont = {
+    'Hack_Nerd_Font',
+    'SauceCodePro_Nerd_Font',
+    'Fira_Code',
+    'Source_Code_Pro',
+    -- 'Consolas',
+    ':h12'
+}
 opt.syntax = 'ON' -- Syntax highlighting based on file type.
 opt.termguicolors = true
 
