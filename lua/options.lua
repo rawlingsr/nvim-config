@@ -15,7 +15,7 @@ opt.guifont = {
     'Fira_Code',
     'Source_Code_Pro',
     -- 'Consolas',
-    ':h12'
+    ':h8'
 }
 opt.syntax = 'ON' -- Syntax highlighting based on file type.
 opt.termguicolors = true
