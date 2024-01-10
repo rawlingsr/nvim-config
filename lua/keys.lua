@@ -1,5 +1,9 @@
 local map = vim.keymap.set
 
+-- map('v', '<C-C>', '"+y', {desc = 'Copy to system clipboard'})
+-- map('n', '<C-C>', '"+p', {desc = 'Copy to system clipboard'})
+-- map('v', '<C-C>', '"+p', {desc = 'Copy to system clipboard'})
+
 -- I couldn't find a lua way to open neotree
 map('n', '<leader>/', ":Neotree toggle<CR>", {desc = "open neotree"})
 
