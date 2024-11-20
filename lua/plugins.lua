@@ -143,7 +143,7 @@ local M = {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "denols",
-                    "tsserver",
+                    "ts_ls",
                     "lua_ls",
                     "rust_analyzer",
                     "html",
@@ -157,7 +157,8 @@ local M = {
                     "bashls",
                     "docker_compose_language_service",
                     "gradle_ls",
-                    "ruby_ls",
+                    "ruby_lsp",
+                    "clangd",
                 },
             })
             require("mason-lspconfig").setup_handlers {
@@ -171,8 +172,8 @@ local M = {
                     }
                 end,
 
-                ["tsserver"] = function()
-                    lspconfig.tsserver.setup {
+                ["ts_ls"] = function()
+                    lspconfig.ts_ls.setup {
                         root_dir = lspconfig.util.root_pattern("package.json"),
                         single_file_support = false
                     }
