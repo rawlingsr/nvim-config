@@ -9,10 +9,10 @@ opt.signcolumn = 'yes'
 
 -- Theme
 opt.guifont = {
-    'Hack_Nerd_Font',
-    'SauceCodePro_Nerd_Font',
-    'Fira_Code',
-    'Source_Code_Pro',
+    -- 'Hack_Nerd_Font',
+    -- 'SauceCodePro_Nerd_Font',
+    'FiraCode_Nerd_Font',
+    -- 'Source_Code_Pro',
     -- 'Consolas',
     ':10'
 }
